@@ -1,0 +1,158 @@
+Sim. Para essa atividade, você precisa **colocar o projeto Java/Spring Boot no GitHub em um repositório público** e enviar o link. O enunciado também exige um `README.md` e a coleção do Postman ou arquivo `.http` versionado. 
+
+### 1. Organize o projeto no VS Code
+
+A estrutura pode ficar assim:
+
+```text
+gerenciador-de-tarefas/
+│
+├── src/
+│   └── main/
+│       └── java/
+│           └── .../
+│               ├── controller/
+│               ├── service/
+│               ├── repository/
+│               └── domain/
+│
+├── src/main/resources/
+│   └── application.properties
+│
+├── postman/
+│   └── gerenciador-tarefas.json
+│
+├── README.md
+├── pom.xml
+└── .gitignore
+```
+
+Isso segue o que o trabalho pede: pacotes separados em `controller`, `service`, `repository` e `domain`. 
+
+### 2. Crie o repositório no GitHub
+
+No GitHub:
+
+1. Entre na sua conta.
+2. Clique em **New repository**.
+3. Nome, por exemplo:
+
+```text
+gerenciador-de-tarefas
+```
+
+4. Marque como **Public**.
+5. Pode adicionar um `README.md`, ou criar o README depois pelo VS Code.
+6. Clique em **Create repository**.
+
+### 3. Abra o projeto no VS Code
+
+Abra a pasta:
+
+```text
+gerenciador-de-tarefas
+```
+
+Depois abra o terminal do VS Code:
+
+**Terminal → New Terminal**
+
+Execute:
+
+```bash
+git init
+```
+
+Depois:
+
+```bash
+git add .
+```
+
+Depois faça o primeiro commit:
+
+```bash
+git commit -m "feat: cria gerenciador de tarefas"
+```
+
+### 4. Ligue o projeto ao GitHub
+
+No seu repositório do GitHub, copie o endereço HTTPS.
+
+Será parecido com:
+
+```text
+https://github.com/SEU-USUARIO/gerenciador-de-tarefas.git
+```
+
+No terminal:
+
+```bash
+git branch -M main
+git remote add origin https://github.com/SEU-USUARIO/gerenciador-de-tarefas.git
+```
+
+E envie:
+
+```bash
+git push -u origin main
+```
+
+Se pedir login/autenticação, siga a autenticação do GitHub.
+
+### 5. Confira no GitHub
+
+Atualize a página do seu repositório.
+
+Você deverá ver coisas como:
+
+```text
+gerenciador-de-tarefas
+├── src
+├── postman
+├── README.md
+├── pom.xml
+└── .gitignore
+```
+
+### 6. O que você precisa entregar
+
+Pelo enunciado, o mínimo é:
+
+* ✅ Projeto Spring Boot
+* ✅ Java 25
+* ✅ Maven
+* ✅ PostgreSQL
+* ✅ `Projeto`
+* ✅ `Responsavel`
+* ✅ `Tarefa`
+* ✅ CRUD de tarefas
+* ✅ Filtro por status/projeto
+* ✅ Tratamento de erro 404
+* ✅ Coleção Postman ou `.http`
+* ✅ `README.md`
+* ✅ Repositório **público**
+* ✅ Link do GitHub enviado para a turma
+
+O trabalho diz explicitamente que **não precisa fazer Front-end/telas**; o entregável é a API. 
+
+### 7. Sobre a imagem que você mandou
+
+Essa imagem é o **MER do banco**. As três entidades principais obrigatórias são:
+
+```text
+PROJETO
+   1
+   |
+   N
+ TAREFA
+   |
+   N
+RESPONSAVEL
+```
+
+Na imagem, `TAREFA_ETIQUETA`, `ETIQUETA` e `COMENTARIO` aparecem como **opcionais/bônus**, então você não precisa começar por elas. O próprio enunciado diz que etiquetas e comentários são desafios opcionais. 
+
+**Minha recomendação:** primeiro faça funcionar somente `Projeto + Responsavel + Tarefa`. Depois faça o CRUD e os testes no Postman. Só então pense nos bônus.
+
+Se você quiser, eu também posso te passar **o projeto completo dessa atividade, arquivo por arquivo (`domain`, `repository`, `service`, `controller`, PostgreSQL, `README.md` e Postman)** já na estrutura para você colocar no GitHub.
