@@ -1,5 +1,0 @@
-POST http://localhost:8080/projetos
-POST http://localhost:8080/responsaveis
-POST http://localhost:8080/tarefas
-GET http://localhost:8080/tarefas?status=NOVA
-GET http://localhost:8080/tarefas?projeto=1
